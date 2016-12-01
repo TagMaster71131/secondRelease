@@ -4,6 +4,7 @@
 body{
 	height: 100vh;
 	position: relative;
+	background-color: lightblue;
 
 }
 
@@ -270,7 +271,7 @@ section{
 /* fb button */
 
 ul.share-buttons{
-  list-style: none;
+  list-style-type: none;
   padding: 0;
   
 }
