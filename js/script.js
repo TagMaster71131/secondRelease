@@ -59,3 +59,5 @@ function initializeClock(id, endtime) {
     }, 1000);
 }
  /* /Clock for countdown, färdigt JavaScript*/
+
+ 
