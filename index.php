@@ -20,22 +20,27 @@ switch ($p) {
 <html>
 <head>
 <meta charset='utf-8'>
-  <title>Mail test</title>
+  <title>Startsidan Release 2</title>
 
-  <meta name='viewport' content='width=device-width, initial-scale=1.0, minimum-scale=1.0'> <!-- Hör ihop med menyn -->
-  <link href='css/main.css' media='screen, projection' rel='stylesheet' type='text/css'> <!-- kopplar ihop css dokumentet med index sidan -->
-  <link href='https://fonts.googleapis.com/css?family=Nothing+You+Could+Do' rel='stylesheet'> <!-- När sidan blir mindre, regleras texten -->
-  <script src='https://code.jquery.com/jquery-3.1.1.min.js' integrity='sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=' crossorigin='anonymous'></script> <!-- Denna kopplar ihop jquery i main.js filen så att menyn funkar -->
-  <script type='text/javascript' src='script/main.js'></script><!-- Kopplar ihop JavaScript med önskad gadget på index sidan, för tillfället har jag inte skapat något, men de kommer.. -->
+<!-- Hör ihop med menyn -->
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, minimum-scale=1.0'> 
 
+
+<!-- kopplar ihop css dokumentet med index sidan -->
+<link href='css/main.css' media='screen, projection' rel='stylesheet' type='text/css'> 
+
+
+<!-- När sidan blir mindre, regleras texten --> 
+<link href='https://fonts.googleapis.com/css?family=Nothing+You+Could+Do' rel='stylesheet'> 
 
 </head>
   <body>
 
 <!-- container -->
+
 <div class='container'>
 
-  <span class='menu-trigger'>MENY</span>
+  <span class='menu-trigger'></span>
 
   <!-- nav-menu -->
   <div class='nav-menu'>
@@ -49,6 +54,11 @@ switch ($p) {
     ";
 
        echo "
+
+<section>
+  
+</section>
+<br />
 
 <div class='site-footer'> <!-- footer med länkar att dela, finns längst ner på index sidan, samt på cv.html och personligtbrev.html. -->
 <footer>

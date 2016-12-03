@@ -56,7 +56,7 @@ echo "
 <html>
 <head>
 
-  <title>Ny Individuell</title>
+  <title>Release 2</title>
   <meta charset='utf-8'/>
   <meta name='viewport' content='width=device-width, initial-scale=1.0, minimum-scale=1.0'>
  
@@ -71,27 +71,21 @@ echo "
 <body>
 
 <!-- container -->
+
 <div class='container'>
 
-  <span class='menu-trigger'>MENY</span>
+  <span class='menu-trigger'></span>
 
   <!-- nav-menu -->
   <div class='nav-menu'>
       <ul class='clearfix'>
-        <li><a href='index.html'>Startsida</a></li>
-        <li><a href='personligtbrev.html'>Profil</a></li>
-        <li><a href='cv.html'>CV</a></li>  
+        <li><a href='index.php?page=home'>Home</a></li>
+        <li><a href='index.php?page=portfolio'>Portfolio</a></li>
+        <li><a href='index.php?page=about'>About</a></li>  
       </ul> 
   </div> <!-- /nav menu -->
-
-
-<div class='back'>
-<img src='img/sky.png'>
-</div>
+  </div>
 <section>
-Hej Hallå! </br> 
-<br>
-<br>
 
 <!-- countdown -->
 <br />
@@ -100,6 +94,8 @@ Hej Hallå! </br>
             <div class='dayItem clockItem'></div>
             <div class='hourItem clockItem'></div>
         </div>
+
+        </section>
 ";
 if(empty($errors) === false){
       echo "<ul>";
@@ -156,12 +152,13 @@ if(empty($errors) === false){
 
   <li><a href='http://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.facebook.com%2Fspinnmaker&title=My%20Profile&summary=&source=https%3A%2F%2Fwww.facebook.com%2Fspinnmaker' target='_blank' title='Share on LinkedIn'><img alt='Share on LinkedIn' src='img/LinkedIn.png'></a></li>
 
-</ul>
-</footer>
-</div>
-</div>
+  </ul>
+    </footer>
 
-</body>
+        </div>
+      </div>
+    
+  </body>
 </html>
 ";
  ?>

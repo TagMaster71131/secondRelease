@@ -37,7 +37,7 @@ if($_POST['submit']) {
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-<h1>PHP/mySQL Login</h1>
+<h1>Admin </h1>
 
 <form method="post" action="login.php">
 	<input type="text" placeholder="Username" name="username" /><br />

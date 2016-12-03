@@ -19,7 +19,7 @@ if(isset($_SESSION['id'])) {
 </head>
 <body>
 
-Welcome, <?php echo $username; ?>, You are logged in. Your user ID is <?php echo $userId; ?>.<br /><br />
+Välkommen Caroline, <?php echo $username; ?>, Du är nu inloggad. Din användar ID är <?php echo $userId; ?>.<br /><br />
 
 <form action="logout.php">
 	<input type="submit" value="Log out" />
