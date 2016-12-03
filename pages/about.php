@@ -1,4 +1,56 @@
-<?php 
+<?php
+
+if(isset($_POST['name'], $_POST['number'], $_POST['sender'], $_POST['receiver'], $_POST['body'])){
+
+
+  // Validate name
+  if(empty($_POST['name'])){
+    $errors[] = "Please enter a name.";
+  }else{
+    $name = htmlentities($_POST['name']);
+  }
+
+
+  // Validate number
+  if(empty($_POST['number'])){
+    $errors[] = "Please enter a number.";
+  }else{
+    $number = htmlentities($_POST['number']);
+  }
+
+
+  // Validate Sender Email
+  if(empty($_POST['sender'])){
+    $errors[] = "Please enter your valid eMail address.";
+  }else if(strlen($_POST['sender']) > 347){
+    $errors[] = "Your eMail is too long. Please provide your valid eMail address.";
+  }else if(filter_var($_POST['sender'], FILTER_VALIDATE_EMAIL) === false){
+    $errors[] = "Please provide a valid eMail address";
+  }else{
+    $email =  "<".htmlentities($_POST['sender']).">";
+
+  }
+
+
+  // Validate Receiver Email
+  if(empty($_POST['receiver'])){
+    $errors[] = "Please enter a valid eMail address for the receiving contact.";
+  }else if(strlen($_POST['receiver']) > 347){
+    $errors[] = "The eMail you entered for the receiver is too long. Please provide a valid eMail address.";
+  }else if(filter_var($_POST['receiver'], FILTER_VALIDATE_EMAIL) === false){
+    $errors[] = "Please provide a valid eMail address for the receiving contact";
+  }else{
+    $to =  "<".htmlentities($_POST['receiver']).">";
+
+  }
+    // Validate The Message Body
+    if(empty($_POST['body'])){
+      $errors[] = "Please enter a message.";
+    }else{
+      $body = htmlentities($_POST['body']);
+    }
+}
+
 echo "
 <!DOCTYPE html>
 <html>
@@ -37,23 +89,7 @@ echo "
 <img src='img/sky.png'>
 </div>
 <section>
-Hej Hallå! </br> Kul att just DU har hittat hit!
-</br>
-Studerar Front End Developer på KYH Stockholm 2016-2018.</br>
-Bor på planeten jorden, världsdel Europa, land Sverige.
-</br>
-I enjoy long walks on the beach, cooking and cuddle down the sofa enjoying a romantic movie.
-</br>
-I am a endless romantiker.
-</br>
-Movies I can't live without:
-
-<ul>
-  <li>Stark Trek</li>
-  <li>Transformers</li>
-  <li>Lord of the Rings</li>
-  <li>Ich bin eine Berliner</li>
-</ul>
+Hej Hallå! </br> 
 <br>
 <br>
 
@@ -64,6 +100,37 @@ Movies I can't live without:
             <div class='dayItem clockItem'></div>
             <div class='hourItem clockItem'></div>
         </div>
+";
+if(empty($errors) === false){
+      echo "<ul>";
+      foreach($errors as $error){
+          echo "<li>",$error,"</li>";
+        }
+        echo "</ul>";
+        }else{
+      if(isset($to, $name, $body, $email)){
+          mail($to, $name, $body, "From: {$email}");
+          echo "Meddelandt skickat!";
+         }
+       }
+       echo "
+        <form method='post' action=''>
+      <label for='name'>Name: </label>
+        <input type='text' id='name' name='name' /><br />
+
+        <label for='number'>Telefonnummer: </label>
+        <input type='text' id='number' name='number' /><br />
+
+      <label for='sender'>Din eMail: </label>
+        <input type='text' id='sender' name='sender' /><br />
+      <label for='receiver'>Mottagarens eMail: </label>
+        <input type='text' id='receiver' name='receiver' /><br />
+      <label for='body'>Meddelande: </label>
+        <textarea id='body' name='body' cols='100' rows='20'></textarea><br />
+        <input type='submit' value='Send eMail' />
+    </form>
+    <!-- /Sending messages -->
+
         </section>
       </div>
 
