@@ -19,48 +19,70 @@ switch ($p) {
     <!DOCTYPE html>
 <html>
 <head>
-<meta charset='utf-8'>
-  <title>Startsidan Release 2</title>
 
-<!-- Hör ihop med menyn -->
-  <meta name='viewport' content='width=device-width, initial-scale=1.0, minimum-scale=1.0'> 
+  <title>Release 2</title>
+  <meta charset='utf-8'/>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, minimum-scale=1.0'>
+  <link href='css/main.css' media='screen, projection' rel='stylesheet' type='text/css'>
 
+  <script src='https://code.jquery.com/jquery-3.1.1.min.js' integrity='sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=' crossorigin='anonymous'></script>
 
-<!-- kopplar ihop css dokumentet med index sidan -->
-<link href='css/main.css' media='screen, projection' rel='stylesheet' type='text/css'> 
+  <script type='text/javascript' src='js/script.js'></script>
 
+  <!-- JS -->
+  <script src='http://code.jquery.com/jquery-latest.js'></script>
+  <script src='script/countdown.js'></script>
 
-<!-- När sidan blir mindre, regleras texten --> 
-<link href='https://fonts.googleapis.com/css?family=Nothing+You+Could+Do' rel='stylesheet'> 
-
+  
 </head>
-  <body>
+<body>
 
 <!-- container -->
-
 <div class='container'>
 
   <span class='menu-trigger'></span>
 
-  <!-- nav-menu -->
+   <!-- nav-menu -->
   <div class='nav-menu'>
-      <ul class='clearfix'>
+      <ul>
         <li><a href='index.php?page=home'>Home</a></li>
         <li><a href='index.php?page=portfolio'>Portfolio</a></li>
         <li><a href='index.php?page=about'>About</a></li>  
       </ul> 
   </div> <!-- /nav menu -->
   </div>
-    ";
 
-       echo "
 
-<section>
-  
-</section>
+<section class='apple'>
+<br />
+<h1>Caroline Permansson - Studying Front End Developer</h1>
+<br />
 <br />
 
-<div class='site-footer'> <!-- footer med länkar att dela, finns längst ner på index sidan, samt på cv.html och personligtbrev.html. -->
+• MatHem i Sverige AB 
+
+ <div id='showmenu'>Klicka här för mer info</div>
+<div class='menu' style='display: none;'><ul><li>Work work work work work!</li></ul></div>
+
+</section>
+
+<br />
+<br />
+
+<section class='banana'>
+
+<h2>Things in process..</h2>
+<br />
+<br />
+<button id='show'>Visa</button>
+<button id='hide'>Dölj</button>
+
+<br />
+<p>Om du klickar på 'Dölj', så försvinner jag.</p>
+
+</section>
+
+<div class='site-footer'>
 <footer>
 
  <ul class='share-buttons'>
@@ -72,7 +94,10 @@ switch ($p) {
   <li><a href='http://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.facebook.com%2Fspinnmaker&title=My%20Profile&summary=&source=https%3A%2F%2Fwww.facebook.com%2Fspinnmaker' target='_blank' title='Share on LinkedIn'><img alt='Share on LinkedIn' src='img/LinkedIn.png'></a></li>
 
 </ul>
+
 </footer>
+</div>
+
 </div>
 
 </body>

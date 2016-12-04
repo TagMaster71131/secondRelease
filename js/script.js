@@ -1,34 +1,19 @@
-$(document).ready(function() {
-	$('#countdown').countdown({ date: '10 November 2017 12:00:30'});
 
-});
+/* Visa / Dölj button Index */
 
-<!-- Från den första releasen -->
-
-/* Menyn på alla sidor*/
-
-jQuery(document).ready(function(){
-    jQuery(".menu-trigger").click(function(){
-        jQuery(".nav-menu").slideToggle(400, function(){
-            jQuery(this).toggleClass("nav-expanded").css('display', '');
-        });
+  $(document).ready(function(){
+    $("#hide").click(function(){
+        $("p").hide();
+    });
+    $("#show").click(function(){
+        $("p").show();
     });
 });
-/* /Menyn på alla sidor*/
 
 
-/* 'Visa mer' knappen CV sida*/
-
-  $(document).ready(function() {
-        $('#showmenu').click(function() {
-                $('.menu').slideToggle("fast");
-        });
-    });
-
-/* /'Visa mer' knappen CV sida*/
 
 
- /* Clock for countdown, färdigt JavaScript*/
+ /* Clock for countdown, färdigt JavaScript
  var deadline = '2018-01-15';
 function getTimeRemaining(endtime) {
     var t = Date.parse(endtime) - Date.parse(new Date());
@@ -58,6 +43,5 @@ function initializeClock(id, endtime) {
         };
     }, 1000);
 }
- /* /Clock for countdown, färdigt JavaScript*/
+*/
 
- 

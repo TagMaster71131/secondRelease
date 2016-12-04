@@ -59,24 +59,22 @@ echo "
   <title>Release 2</title>
   <meta charset='utf-8'/>
   <meta name='viewport' content='width=device-width, initial-scale=1.0, minimum-scale=1.0'>
- 
+
   <link href='css/main.css' media='screen, projection' rel='stylesheet' type='text/css'>
 
   <script src='https://code.jquery.com/jquery-3.1.1.min.js' integrity='sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=' crossorigin='anonymous'></script>
-  <script type='text/javascript' src='script/main.js'></script>
-  <script type='text/javascript' src='script/main1.js'></script>
 
+  <script type='text/javascript' src='js/script.js'></script>
 
 </head>
 <body>
 
 <!-- container -->
-
 <div class='container'>
 
-  <span class='menu-trigger'></span>
+  <span class='menu-trigger'>MENY</span>
 
-  <!-- nav-menu -->
+   <!-- nav-menu -->
   <div class='nav-menu'>
       <ul class='clearfix'>
         <li><a href='index.php?page=home'>Home</a></li>
@@ -85,17 +83,20 @@ echo "
       </ul> 
   </div> <!-- /nav menu -->
   </div>
-<section>
 
-<!-- countdown -->
-<br />
-<div id='clockdiv'>
-<h4>Dagar till Examen</h4>
-            <div class='dayItem clockItem'></div>
-            <div class='hourItem clockItem'></div>
-        </div>
 
-        </section>
+<section class='pear'>
+MatHem i Sverige AB 
+
+ <div id='showmenu'>Klicka här för mer info</div>
+<div class='menu' style='display: none;'><ul><li>Work work work work work!</li></ul></div>
+
+
+
+ 
+</section>
+
+
 ";
 if(empty($errors) === false){
       echo "<ul>";
@@ -106,41 +107,40 @@ if(empty($errors) === false){
         }else{
       if(isset($to, $name, $body, $email)){
           mail($to, $name, $body, "From: {$email}");
-          echo "Meddelandt skickat!";
+          echo "";
          }
        }
        echo "
+       <section class='orange'>
+
         <form method='post' action=''>
-      <label for='name'>Name: </label>
+      <label for='name'>Name: </label><br />
         <input type='text' id='name' name='name' /><br />
 
-        <label for='number'>Telefonnummer: </label>
+        <label for='number'>Telefonnummer: </label><br />
         <input type='text' id='number' name='number' /><br />
 
-      <label for='sender'>Din eMail: </label>
+      <label for='sender'>Din eMail: </label><br />
         <input type='text' id='sender' name='sender' /><br />
-      <label for='receiver'>Mottagarens eMail: </label>
+      <label for='receiver'>Mottagarens eMail: </label><br />
         <input type='text' id='receiver' name='receiver' /><br />
-      <label for='body'>Meddelande: </label>
-        <textarea id='body' name='body' cols='100' rows='20'></textarea><br />
+      <label for='body'>Meddelande: </label><br />
+        <textarea id='body' name='body' cols='50' rows='10'></textarea><br />
         <input type='submit' value='Send eMail' />
     </form>
+    
+    </section>
+
     <!-- /Sending messages -->
 
-        </section>
-      </div>
+        
+      
+
+<br />
+<br />
 
 
-</div>
-     <script type='text/javascript' src='countdown.js'></script>
-      <script type='text/javascript'>
-        initializeClock('clockdiv', deadline);
-    </script>
-<!-- /countdown -->
-
-</section>
-
- 
+ <!-- FOOTER -->
 
 <div class='site-footer'>
 <footer>
@@ -155,9 +155,7 @@ if(empty($errors) === false){
   </ul>
     </footer>
 
-        </div>
-      </div>
-    
+    </div>
   </body>
 </html>
 ";

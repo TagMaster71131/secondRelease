@@ -7,29 +7,12 @@ echo "
   <title>Release 2</title>
   <meta charset='utf-8'/>
   <meta name='viewport' content='width=device-width, initial-scale=1.0, minimum-scale=1.0'>
+
   <link href='css/main.css' media='screen, projection' rel='stylesheet' type='text/css'>
+
   <script src='https://code.jquery.com/jquery-3.1.1.min.js' integrity='sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=' crossorigin='anonymous'></script>
+
   <script type='text/javascript' src='script/main.js'></script>
-
-  <!-- JS -->
-  <script src='http://code.jquery.com/jquery-latest.js'></script>
-  <script src='script/countdown.js'></script>
-
-  <script>
-    
-      $(document).ready(function(){
-          $('#countdown').countdown({
-              date: '24 November 2016 12:00:00',
-              format: 'on'
-          },
-
-            function() {
-                // callback function
-            });
-      });
-
-  </script>
-
 
 </head>
 <body>
@@ -39,19 +22,16 @@ echo "
 
   <span class='menu-trigger'>MENY</span>
 
-  <!-- nav-menu -->
+   <!-- nav-menu -->
   <div class='nav-menu'>
       <ul class='clearfix'>
-        <li><a href='index.html'>Startsida</a></li>
-        <li><a href='personligtbrev.html'>Profil</a></li>
-        <li><a href='cv.html'>CV</a></li>  
+        <li><a href='index.php?page=home'>Home</a></li>
+        <li><a href='index.php?page=portfolio'>Portfolio</a></li>
+        <li><a href='index.php?page=about'>About</a></li>  
       </ul> 
-  </div> 
-  <!-- /nav menu -->
+  </div> <!-- /nav menu -->
+  </div>
 
-<div class='back'>
-<img src='img/sky.png'>
-</div>
 <section>
 • MatHem i Sverige AB 
 
