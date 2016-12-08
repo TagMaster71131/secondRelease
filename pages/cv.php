@@ -20,7 +20,7 @@ echo "
 <!-- container -->
 <div class='container'>
 
-  <span class='menu-trigger'>MENY</span>
+  <span class='menu-trigger'></span>
 
    <!-- nav-menu -->
   <div class='nav-menu'>
@@ -28,17 +28,22 @@ echo "
         <li><a href='index.php?page=home'>Home</a></li>
         <li><a href='index.php?page=portfolio'>Portfolio</a></li>
         <li><a href='index.php?page=about'>About</a></li>  
+        <li><a href='index.php?page=subpage'>Subpage</a></li>
+        <li><a href='index.php?page=gastbok'>Gästbok</a></li>
       </ul> 
   </div> <!-- /nav menu -->
   </div>
 
-<section>
-• MatHem i Sverige AB 
+<section class='strawberry'>
+<h1>Mitt CV</h1>
 
- <div id='showmenu'>Klicka här för mer info</div>
-<div class='menu' style='display: none;'><ul><li>Work work work work work!</li></ul></div>
+Front End Developer - KYH Stockholm
+
 <hr>
 
+Mathem i Sverige AB
+
+<hr>
 
  
 </section>

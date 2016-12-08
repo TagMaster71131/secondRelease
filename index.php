@@ -12,8 +12,18 @@ switch ($p) {
           ob_end_clean();
           include 'pages/about.php';
     break;
-    
-
+    case 'subpage':
+          ob_end_clean();
+          include 'pages/subpage.php';
+    break;
+    case 'gastbok':
+          ob_end_clean();
+          include 'pages/gastbok.php';
+    break;
+    case 'admin':
+          ob_end_clean();
+          include 'pages/admin.php';
+    break;
   default:
     echo "
     <!DOCTYPE html>
@@ -47,7 +57,10 @@ switch ($p) {
       <ul>
         <li><a href='index.php?page=home'>Home</a></li>
         <li><a href='index.php?page=portfolio'>Portfolio</a></li>
-        <li><a href='index.php?page=about'>About</a></li>  
+        <li><a href='index.php?page=about'>About</a></li> 
+        <li><a href='index.php?page=subpage'>Subpage</a></li> 
+        <li><a href='index.php?page=gastbok'>Gästbok</a></li>
+        <li><a href='index.php?page=admin'>Admin</a></li>
       </ul> 
   </div> <!-- /nav menu -->
   </div>
@@ -58,11 +71,6 @@ switch ($p) {
 <h1>Caroline Permansson - Studying Front End Developer</h1>
 <br />
 <br />
-
-• MatHem i Sverige AB 
-
- <div id='showmenu'>Klicka här för mer info</div>
-<div class='menu' style='display: none;'><ul><li>Work work work work work!</li></ul></div>
 
 </section>
 

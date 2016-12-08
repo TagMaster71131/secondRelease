@@ -20,31 +20,12 @@ if($_POST['submit']) {
 	if($username = $dbUsername && $password == $dbPassword) {
 		$_SESSION['username'] = $username;
 		$_SESSION['id'] = $userId;
-		header('Location: user.php');
+		header('Location: http://jace2010.se/index.php');
 
 	} else {
-		echo "Indcorrect username or password.";
+		echo " Username or password is incorrect. ";
 	}
 }
 
 ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-	<title>Login page</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-<h1>Admin </h1>
-
-<form method="post" action="login.php">
-	<input type="text" placeholder="Username" name="username" /><br />
-	<input type="password" placeholder="Password" name="password" /><br />
-	<input type="submit" name="submit" value="Log In" />
-
-</form>
-
-</body>
-</html>

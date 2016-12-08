@@ -1,7 +1,7 @@
 <?php 
 
 $dbCon = mysqli_connect("localhost", "root", "", "relese2login");
-// MySqli injection defense.
+// MySqli injection.
 $username = mysqli_real_escape_string($dbCon, $_POST['username']);
 $password = mysqli_real_escape_string($dbCon, $_POST['password']);
 $sql_command = "select * from users where username = '" . $username; $sql_command .= "' AND password = '" . $password . "'";
