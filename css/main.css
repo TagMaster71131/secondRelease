@@ -1,5 +1,8 @@
 body{
 	background-image: url(../img/wood.jpg);
+	margin: 0;
+	padding: 0;
+	font-family: Tahoma;
 }
 /* MENY */
 
@@ -40,8 +43,74 @@ div.nav.menu ul li a:visited{
 	font-family: 'Taviraj', serif;
 }
 
+/* --- Mediaqueries -- */
+@media screen and (max-width: 3000px) {
+
+
+
+}
+
+@media screen and (max-width: 959px) {
+
+
+
+}
+
+@media screen and (max-width: 480px) {
+
+	a{
+		text-decoration: none;
+		color: inherit;
+	}
+
+	div.nav-menu nav ul {
+
+		background-color: #fff;
+		overflow: hidden;
+		color: #fff;
+		padding: 0;
+		text-align: center;
+	}
+
+		div.nav-menu nav ul li {
+
+		display: inline-block;
+		padding: 20px;
+
+	}
+
+	div.nav-menu nav ul li: hover {
+
+			background-color: lightblue;
+	}
+
+	section {
+
+		line-height: 1.5em;
+		font-size: 0.9em;
+
+	}
+
+	div.site-footer{
+
+	background: #000;
+ 	text-align: center;
+  	color: #fff;
+  	right: 0;
+  	left: 0;
+ 	padding: 1rem;
+ 	opacity: 0.7;
+ 	width: 100%;
+    float: left;
+    margin-left: -4.5em;
+	margin-top: 30px;
+}
+
+}
+
+
 /* SECTION PART */
-section{
+section {
 
 	height: 200px;
 	width: 90%;
@@ -136,6 +205,13 @@ section.orange {
 
 .pear {
 
+	height: 300px;
+	width: 90%;
+	background-color: #fff;
+	color: #000;
+	opacity: 0.6;
+	margin-left: 4.5em;
+	margin-top: 50px;
 	padding: 20px;
 }
 
@@ -150,8 +226,8 @@ section.orange {
 
 .goat {
 
-	height: 450px;
-	width: 550px;
+	height: 250px;
+	width: 200px;
 	float: left;
 	padding-left: 1em;
 
@@ -173,3 +249,316 @@ div.site-footer{
     margin-left: 4.5em;
 	margin-top: 30px;
 }
+
+/* Portfolio */
+
+.clickable-heading {
+    cursor: pointer
+}
+.clickable-heading:hover {
+    color:#515151
+}
+h3 {
+
+	color: #fff;
+}
+
+
+
+
+/* FROM TEST MENU */
+
+header {
+
+	background: #fff;
+	opacity: 0.6;
+	width: 100%;
+	padding: 40px 0;
+	color: #000;
+	text-align: center;
+	font-size: 2em;
+	font-family: Tahoma;
+}
+
+ a {
+	text-decoration: none;
+	color: inherit;
+}
+
+nav ul {
+
+	background-color: #000;
+	overflow: hidden;
+	color: #fff;
+	padding: 0;
+	text-align: center;
+	margin: 0;
+	-webkit-transition: max-height 0.4s;
+	-ms-transition: max-height 0.4s;
+	-moz-transition: max-height 0.4s;
+	-o-transition: max-height 0.4s;
+	transition: max-height 0.4s;
+}
+
+nav ul li {
+
+	display: inline-block;
+	padding: 20px;
+	color: #fff;
+	font-family: Tahoma;
+
+}
+
+nav ul li a:link {
+
+	color: #fff;
+}
+
+ nav ul li:hover {
+
+			background-color: lightblue;
+	}
+
+section {
+	line-height: 1.5em;
+	font-size: 0.9em;
+	padding: 40px; 
+	width: 75%;
+	margin: 0 auto;
+}
+.handle {
+	width: 100%;
+	background: #005c48;
+	text-align: left;
+	box-sizing: border-box;
+	padding: 15px 10px;
+	cursor: pointer;
+	color: #fff;
+	display: none;
+}
+@media screen and (max-width: 580px){
+
+	nav ul {
+		max-height: 0;
+	}
+
+	.showing {
+		max-height: 20em;
+
+	}
+
+	nav ul li{
+		box-sizing: border-box;
+		width: 100%;
+		padding: 15px;
+		text-align: left;
+	}
+
+
+	.handle {
+		display: block;
+		color: #fff;
+	}	
+
+
+/********** HANGMAN **********/
+
+
+
+/* Variabes */  
+$orange: #ffa600;
+$green: #c1d72e;
+$blue: #82d2e5;
+$grey:#f3f3f3;
+$white: #fff;
+$base-color:$green ;
+
+/* Mixin's */ 
+
+@mixin transition {
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+@mixin clear {
+  &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+}
+
+ @mixin box-size {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+ @mixin transition {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+@mixin fade {
+  -moz-transition: all 1s ease-in;
+  -moz-transition:all 0.3s ease-in-out;
+  -webkit-transition:all 0.3s ease-in-out;
+}
+
+@mixin opacity {
+  opacity:0.4;
+  filter:alpha(opacity=40); 
+  @include fade;
+}
+
+@mixin corners ($radius) {
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  border-radius: $radius; 
+  -khtml-border-radius: $radius; 
+}
+
+body {
+  background:$base-color;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  color:$white;
+  height:100%;
+  text-align:center;
+  font-size:18px;
+}
+
+.wrappper{
+  @include clear;
+  width:100%;
+  margin:0 auto;
+}
+
+
+canvas{
+  color: lightblue;
+  border: #000 dashed 2px;
+  padding: 15px;
+}
+
+h1, h2, h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    text-transform: uppercase;
+   margin:5px 0;
+}
+
+h1 {
+    font-size: 2.6em;
+    border: 1px solid;
+    color: #fff;
+}
+
+h2 {
+    font-size: 1.6em;
+    color: #fff;
+}
+
+p{
+  font-size: 1.6em;
+  color: #fff;
+}
+
+#alphabet {
+  @include clear;
+  margin:15px auto;
+  padding:0;
+  max-width:900px;
+}
+
+#alphabet li {
+  float:left;
+  margin: 0 10px 10px 0;
+  list-style:none;
+  width:55px;
+  height:50px;
+  padding-top: 10px;
+  background: lightblue;
+  cursor:pointer;
+  border: solid 1px black;
+    
+}
+
+#alphabet li:hover{
+      background:$base-color;
+      border: solid 1px #eee;
+      color: #fff;
+    }
+
+#my-word {
+  margin: 0;
+  display: block;
+  padding: 0;
+  display:block;
+}
+
+#my-word li {
+  position: relative;
+  list-style: none;
+  margin: 0;
+  display: inline-block;
+  padding: 0 10px;
+  font-size:1.6em;
+}
+
+.active {
+  @include opacity;
+  cursor:default;
+    
+  &:hover{
+      @include fade;
+      @include opacity;
+    }
+}
+
+#mylives{
+  font-size:1.6em;
+  text-align:center;
+  display:block;
+}
+
+button{
+  @include corners (5px);
+  background-color: lightblue;
+  color:$white;
+  border: solid 1px black;
+  text-decoration:none;
+  cursor:pointer;
+  font-size:1.2em;
+  padding:18px 10px;
+  width:180px;
+  margin: 10px;
+  outline: none;
+  
+    &:hover{
+      @include transition;
+      background:$white;
+      border: solid 1px $white;
+      color:$base-color;
+    }
+}
+
+@media (max-width: 767px) {
+  #alphabet {
+  padding:0 0 0 15px;
+}
+  }
+
+  @media (max-width: 480px) {
+  #alphabet {
+  padding:0 0 0 25px;
+}
+  }
+
+ /********** END OF HANGMAN **********/
+
+ section {
+
+ 	color: #fff;
+ }

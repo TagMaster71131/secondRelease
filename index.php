@@ -12,10 +12,6 @@ switch ($p) {
           ob_end_clean();
           include 'pages/about.php';
     break;
-    case 'subpage':
-          ob_end_clean();
-          include 'pages/subpage.php';
-    break;
     case 'gastbok':
           ob_end_clean();
           include 'pages/gastbok.php';
@@ -23,6 +19,10 @@ switch ($p) {
     case 'admin':
           ob_end_clean();
           include 'pages/admin.php';
+    break;
+    case 'hangman':
+          ob_end_clean();
+          include 'pages/hangman.php';
     break;
   default:
     echo "
@@ -39,37 +39,27 @@ switch ($p) {
 
   <script type='text/javascript' src='js/script.js'></script>
 
-  <!-- JS -->
-  <script src='http://code.jquery.com/jquery-latest.js'></script>
-  <script src='script/countdown.js'></script>
-
-  
 </head>
 <body>
 
 <!-- container -->
-<div class='container'>
-
-  <span class='menu-trigger'></span>
-
-   <!-- nav-menu -->
-  <div class='nav-menu'>
-      <ul>
+<header>
+    Caroline Permansson - Mitt individuella projekt
+  </header>
+    <nav>
+      <ul class='showing'>
         <li><a href='index.php?page=home'>Home</a></li>
-        <li><a href='index.php?page=portfolio'>Portfolio</a></li>
-        <li><a href='index.php?page=about'>About</a></li> 
-        <li><a href='index.php?page=subpage'>Subpage</a></li> 
-        <li><a href='index.php?page=gastbok'>Gästbok</a></li>
-        <li><a href='index.php?page=admin'>Admin</a></li>
-      </ul> 
-  </div> <!-- /nav menu -->
-  </div>
+            <li><a href='index.php?page=portfolio'>Portfolio</a></li>
+            <li><a href='index.php?page=about'>CV</a></li> 
+        
+            <li><a href='index.php?page=hangman'>Hangman</a></li> 
+            <li><a href='index.php?page=gastbok'>Gästbok</a></li>
+            <li><a href='index.php?page=admin'>Admin</a></li>
+      </ul>
+      <div class='handle'>Menu</div>
+      
+    </nav>
 
-
-<section class='apple'>
-<br />
-<h1>Caroline Permansson - Studying Front End Developer</h1>
-<br />
 <br />
 
 </section>
@@ -77,19 +67,24 @@ switch ($p) {
 <br />
 <br />
 
-<section class='banana'>
-
-<h2>Things in process..</h2>
-<br />
-<br />
-<button id='show'>Visa</button>
-<button id='hide'>Dölj</button>
-
-<br />
-<p>Om du klickar på 'Dölj', så försvinner jag.</p>
+<section>
+      <h1>Välkommen!</h1>
+      
+      <p>
+        LIAn startar om <span id='lia'></span>.<br/>
+        <br/>
+        Examen sker om <span id='exam'></span>.
+      </p>
 
 </section>
-
+<br />
+      <br />
+      
+<div class='entry'>
+      <img src='https://media.giphy.com/media/E1v4GJ5LkcPHa/giphy.gif'>
+      
+    </div>
+    <br />
 <div class='site-footer'>
 <footer>
 
@@ -107,7 +102,16 @@ switch ($p) {
 </div>
 
 </div>
+<script type='text/javascript' src='http://code.jquery.com/jquery-3.1.1.min.js'></script>
+  
+  <!-- Load countdown script -->
+  <script type='text/javascript' src='js/jquery.countdown.min.js'></script>
+  
+  <!-- Load JSSocials script -->
+  <script type='text/javascript' src='js/jssocials.min.js'></script>
 
+  <!-- Load my own script -->
+  <script type='text/javascript' src='js/script1.js'></script>
 </body>
 </html>
        ";

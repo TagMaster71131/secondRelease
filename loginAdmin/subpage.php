@@ -20,52 +20,31 @@ echo "
 <!-- container -->
 <div class='container'>
 
-  <span class='menu-trigger'></span>
+  <span class='menu-trigger'>MENY</span>
 
    <!-- nav-menu -->
   <div class='nav-menu'>
-      <ul>
+      <ul class='clearfix'>
         <li><a href='index.php?page=home'>Home</a></li>
         <li><a href='index.php?page=portfolio'>Portfolio</a></li>
-        <li><a href='index.php?page=about'>About</a></li> 
-        <li><a href='index.php?page=subpage'>Subpage</a></li> 
-        <li><a href='index.php?page=gastbok'>Gästbok</a></li>
+        <li><a href='index.php?page=about'>About</a></li>  
+        <li><a href='index.php?page=subpage'>Subpage</a></li>
       </ul> 
   </div> <!-- /nav menu -->
   </div>
 
-";
-?>
-
-
-<?php
-
-echo "
-
 <section class='strawberry'>
-<h1>Mina projekt</h1>
+<h1>Mitt CV</h1>
 
-<h3>School project</h3>
+Front End Developer - KYH Stockholm
 
 <hr>
-<br />
 
-<img class='goat' src='img/dengladageten.png'>
-<img class='goat' src='img/project1.png'>
+Mathem i Sverige AB
 
-</section>
+<hr>
 
-<section class='admin'>
-
-<h1>Admin log in</h1>
-
-<form method='post' action='login.php'>
-  <input type='text' placeholder='Username' name='username' /><br />
-  <input type='password' placeholder='Password' name='password' /><br />
-  <input type='submit' name='submit' value='Log In' />
-
-</form>
-
+ 
 </section>
 
 <div class='site-footer'>

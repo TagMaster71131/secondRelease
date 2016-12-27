@@ -6,11 +6,14 @@ echo "
 
   <title>Release 2</title>
   <meta charset='utf-8'/>
-  <meta name='viewport' content='width=device-width, initial-scale=1.0, minimum-scale=1.0'>
+
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+  <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
 
   <link href='css/main.css' media='screen, projection' rel='stylesheet' type='text/css'>
 
-  <script src='https://code.jquery.com/jquery-3.1.1.min.js' integrity='sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=' crossorigin='anonymous'></script>
 
   <script type='text/javascript' src='script/main.js'></script>
 
@@ -18,34 +21,50 @@ echo "
 <body>
 
 <!-- container -->
-<div class='container'>
-
-  <span class='menu-trigger'></span>
-
-   <!-- nav-menu -->
-  <div class='nav-menu'>
-      <ul class='clearfix'>
+<header>
+    Caroline Permansson - Mitt individuella projekt
+  </header>
+    <nav>
+      <ul class='showing'>
         <li><a href='index.php?page=home'>Home</a></li>
-        <li><a href='index.php?page=portfolio'>Portfolio</a></li>
-        <li><a href='index.php?page=about'>About</a></li>  
-        <li><a href='index.php?page=subpage'>Subpage</a></li>
-        <li><a href='index.php?page=gastbok'>Gästbok</a></li>
-      </ul> 
-  </div> <!-- /nav menu -->
-  </div>
+            <li><a href='index.php?page=portfolio'>Portfolio</a></li>
+            <li><a href='index.php?page=about'>CV</a></li> 
+            
+            <li><a href='index.php?page=hangman'>Hangman</a></li> 
+            <li><a href='index.php?page=gastbok'>Gästbok</a></li>
+            <li><a href='index.php?page=admin'>Admin</a></li>
+      </ul>
+      <div class='handle'>Menu</div>
+      
+    </nav>
+
+<br />
+
+</section>
+
+";
+?>
+
+
+<?php
+
+echo "
 
 <section class='strawberry'>
-<h1>Mitt CV</h1>
+<h1>Mina projekt</h1>
 
-Front End Developer - KYH Stockholm
-
-<hr>
-
-Mathem i Sverige AB
+<h3>School project</h3>
 
 <hr>
+<br />
 
- 
+<img class='goat' src='img/dengladageten.png'>
+<img class='goat' src='img/project1.png'>
+<img class='goat' src='img/todo.png'>
+
+</section>
+
+
 </section>
 
 <div class='site-footer'>

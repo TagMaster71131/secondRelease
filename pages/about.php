@@ -16,62 +16,61 @@ echo "
 
   <script type='text/javascript' src='js/script.js'></script>
 
+  <script type='text/javascript' src='js/toggle.js'></script>
+
+
+
+
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+  <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+
+
 </head>
 <body>
-
-
-
 <!-- container -->
-<div class='container'>
-
-  <span class='menu-trigger'>MENY</span>
-
-   <!-- nav-menu -->
-  <div class='nav-menu'>
-      <ul class='clearfix'>
+<header>
+    Caroline Permansson - Mitt individuella projekt
+  </header>
+    <nav>
+      <ul class='showing'>
         <li><a href='index.php?page=home'>Home</a></li>
-        <li><a href='index.php?page=portfolio'>Portfolio</a></li>
-        <li><a href='index.php?page=about'>About</a></li>  
-        <li><a href='index.php?page=subpage'>Subpage</a></li>
-        <li><a href='index.php?page=gastbok'>Gästbok</a></li>
-      </ul> 
-  </div> <!-- /nav menu -->
-  </div>
+            <li><a href='index.php?page=portfolio'>Portfolio</a></li>
+            <li><a href='index.php?page=about'>CV</a></li> 
+           
+            <li><a href='index.php?page=hangman'>Hangman</a></li> 
+            <li><a href='index.php?page=gastbok'>Gästbok</a></li>
+            <li><a href='index.php?page=admin'>Admin</a></li>
+      </ul>
+      <div class='handle'>Menu</div>
+      
+    </nav>
 
+<br />
+
+</section>
 
 <section class='pear'>
-<h1>About Me</h1>
 
+
+<div class='container'>
+  <h2>CV</h2>
+  <p>Front End Developer KYH Stockholm</p>
+  <button type='button' class='btn btn-info' data-toggle='collapse' data-target='#demo'>Visa mer</button>
+  <div id='demo' class='collapse'>
+    Studerar front end developer 2016-2018 i stockholm. Det handlar om viljestyrka för att orka.. 
+  </div>
+  <br />
+  
+</div>
+</div>
 
 
 
  
 </section>
 
-
-";
-if(empty($errors) === false){
-      echo "<ul>";
-      foreach($errors as $error){
-          echo "<li>",$error,"</li>";
-        }
-        echo "</ul>";
-        }else{
-      if(isset($to, $name, $body, $email)){
-          mail($to, $name, $body, "From: {$email}");
-          echo "";
-         }
-       }
-       echo "
-     
-
-
-    </section>
-
-    <!-- /Sending messages -->
-
-        
-      
 
 <br />
 <br />

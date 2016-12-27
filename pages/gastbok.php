@@ -48,22 +48,26 @@ echo "
 <body>
 
 <!-- container -->
-<div class='container'>
-
-  <span class='menu-trigger'></span>
-
-   <!-- nav-menu -->
-  <div class='nav-menu'>
-      <ul>
+<header>
+    Caroline Permansson - Mitt individuella projekt
+  </header>
+    <nav>
+      <ul class='showing'>
         <li><a href='index.php?page=home'>Home</a></li>
-        <li><a href='index.php?page=portfolio'>Portfolio</a></li>
-        <li><a href='index.php?page=about'>About</a></li> 
-        <li><a href='index.php?page=subpage'>Subpage</a></li> 
-        <li><a href='index.php?page=gastbok'>Gästbok</a></li>
-      </ul> 
-  </div> <!-- /nav menu -->
-  </div>
-	<br />
+            <li><a href='index.php?page=portfolio'>Portfolio</a></li>
+            <li><a href='index.php?page=about'>CV</a></li> 
+            
+            <li><a href='index.php?page=hangman'>Hangman</a></li> 
+            <li><a href='index.php?page=gastbok'>Gästbok</a></li>
+            <li><a href='index.php?page=admin'>Admin</a></li>
+      </ul>
+      <div class='handle'>Menu</div>
+      
+    </nav>
+
+<br />
+
+</section>
 	<br />
 	<h1>Gästbok</h1>
 
@@ -88,7 +92,7 @@ echo "
 	<?php
 
 	
-		$db = mysqli_connect('localhost', 'root', '', 'guestbook');
+		$db = mysqli_connect('100923-219357.mysql.binero.se', '219357_eo33438', 'jace2010', '219357-100923');
 
 		if( isset($_POST['message']) 
 			&& isset($_POST['sender']) ){
